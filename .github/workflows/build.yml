@@ -1,0 +1,57 @@
+name: Build CustomNew
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Windows x64
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore src/CustomNew/CustomNew.csproj
+
+      - name: Build
+        run: dotnet build src/CustomNew/CustomNew.csproj --configuration Release --no-restore
+
+      - name: Publish
+        run: >
+          dotnet publish src/CustomNew/CustomNew.csproj
+          --configuration Release
+          --runtime win-x64
+          --self-contained true
+          --output publish
+          /p:PublishSingleFile=true
+          /p:IncludeNativeLibrariesForSelfExtract=true
+
+      - name: Create ZIP
+        shell: pwsh
+        run: |
+          Compress-Archive `
+            -Path publish\* `
+            -DestinationPath CustomNew-win-x64.zip `
+            -Force
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: CustomNew-win-x64
+          path: CustomNew-win-x64.zip
+          if-no-files-found: error
