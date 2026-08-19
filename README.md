@@ -21,4 +21,4 @@ This project is licensed under the MIT License. Please visit [`LICENSE`](LICENSE
 ## Installing
 
 Installing CustomNew is as easy as running a command in powershell. The installer grabs the latest release, installs the registry edit, and restarts explorer.
-Use [`irm https://raw.githubusercontent.com/Plutonium-Net/CustomNew/main/install.ps1 | iex`] to install CustomNew.
+Use `irm https://raw.githubusercontent.com/Plutonium-Net/CustomNew/main/install.ps1 | iex` to install CustomNew.
