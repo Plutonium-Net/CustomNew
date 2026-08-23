@@ -28,3 +28,9 @@ Use `irm https://raw.githubusercontent.com/Plutonium-Net/CustomNew/main/install.
 ## Uninstalling
 
 Uninstalling CustomNew is as easy as it was to install it. Just run `irm https://raw.githubusercontent.com/Plutonium-Net/CustomNew/main/uninstall.ps1 | iex` to completely uninstall CustomNew from your Computer.
+
+---
+
+## NOTE
+
+PLEASE DO NOT RUN AS OF `8/23/26`. THERE IS A PROBLEM WITH THE CONTEXT MENU AS OF A RESULT ADDING CUSTOMNEW CAUSING EXPLORER.EXE TO CRASH AND NOT RESTART/BE ABLE TO BE RESTARTED UNLESS YOU REBOOT YOUR COMPUTER. THERE WILL BE A BUG FIX SOON.
