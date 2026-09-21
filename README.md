@@ -10,6 +10,8 @@ You can simply:
 
 `Right-click → Custom File... → Type filename → Create`
 
+Please see note at the bottom.
+
 ---
 
 ## Licensing
