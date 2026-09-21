@@ -33,4 +33,4 @@ Uninstalling CustomNew is as easy as it was to install it. Just run `irm https:/
 
 ## NOTE
 
-PLEASE DO NOT RUN AS OF `8/23/26`. THERE IS A PROBLEM WITH THE CONTEXT MENU AS OF A RESULT ADDING CUSTOMNEW CAUSING EXPLORER.EXE TO CRASH AND NOT RESTART/BE ABLE TO BE RESTARTED UNLESS YOU REBOOT YOUR COMPUTER. THERE WILL BE A BUG FIX SOON.
+Bug fixes have been implemented, however, when running Windows 10 22H2, CustomNew sometimes results in explorer.exe crashing from time to time, and you cannot restart explorer unless you reboot your entire PC. So, I really advise that people on that version of windows do NOT download this.
